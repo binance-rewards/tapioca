@@ -49,7 +49,7 @@ group :development, :test do
     require: false
   gem "activeresource"
   gem "google-protobuf"
-  gem "graphql"
+  gem "graphql", ">= 2.4.13"
   gem "shopify-money"
   gem "sidekiq"
   gem "nokogiri"
