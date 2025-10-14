@@ -24,10 +24,10 @@ end
 
 group :development, :test do
   if rails_version == "main"
-    gem "rails", github: "rails/rails", branch: "main"
+    gem "rails", ">= 7.1.5.1", github: "rails/rails", branch: "main"
   else
     rails_version = CURRENT_RAILS_VERSION if rails_version == "current"
-    gem "rails", "~> #{rails_version}.0"
+    gem "rails", ">= 7.1.5.1", "~> #{rails_version}.0"
   end
   if rails_version == "7.0"
     gem "sqlite3", "~> 1.4"
@@ -39,7 +39,7 @@ group :development, :test do
   gem "smart_properties"
   gem "json_api_client"
   gem "frozen_record"
-  gem "sprockets"
+  gem "sprockets", ">= 4.2.2"
   gem "state_machines"
   gem "activerecord-typedstore"
   gem "identity_cache"
@@ -51,7 +51,7 @@ group :development, :test do
   gem "google-protobuf"
   gem "graphql"
   gem "shopify-money"
-  gem "sidekiq"
+  gem "sidekiq", ">= 7.3.6"
   gem "nokogiri"
   gem "config"
   gem "aasm"
